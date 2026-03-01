@@ -1,4 +1,4 @@
-# LUKS2 Guide
+# Guide on how to use LUKS2 encryption for disk images
 
 *In this guide I aim to show how to create and use LUKS2 encrypted disk images on Linux.*
 
