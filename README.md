@@ -1,6 +1,6 @@
-# LUKS2 Container Guide
+# LUKS2 Guide
 
-*In this guide I aim to show how to create and use LUKS2 containers on Linux.*
+*In this guide I aim to show how to create and use LUKS2 encrypted disk images on Linux.*
 
 Disclaimer: This guide is provided for educational purposes only.
 I am not responsible for any data loss, security breaches, or other damages that may result from following these instructions.
