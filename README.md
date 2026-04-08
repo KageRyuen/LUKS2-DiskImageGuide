@@ -150,8 +150,8 @@ First unlock it.
 
 `sudo cryptsetup luksOpen LUKS2_container.img vault_name`
 
-Replace `vault_name` with whatever you want to name it. It will be the name where the system maps the unlocked image
-(to `/dev/mapper/vault_name`). It will prompt you for the passphrase. Once unlucked, simply mount it.
+Replace `vault_name` with whatever you want to name it. It'll be mapped to `/dev/mapper/vault_name`.
+Once unlocked, simply mount it.
 
 `sudo mount /dev/mapper/vault_name /your/mount/point`
 
