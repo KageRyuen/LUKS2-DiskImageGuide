@@ -130,16 +130,37 @@ The `-L vault_data` gives the file system a label, it isn't a necessary option, 
 
 Once you formatted it, you can mount it:
 
-`sudo mount /dev/mapper/vault_name /mnt/your_mount_point`
+`sudo mount /dev/mapper/vault_name /your/mount/point`
 
-Replace the `/mnt/your_mount_point` with the directory where you wish to mount it (it has to be an empty folder).
+Replace the `/your/mount/point` with the directory where you wish to mount it (it has to be an empty folder).
 
 **Remember that while the container is open, the data is accessible.**
 
 Once you finished using it, unmount it:
 
-`sudo umount /mnt/your_mount_point`
+`sudo umount /your/mount/point`
 
 And close it:
 
 `sudo cryptsetup luksClose vault_name`
+
+## Quick use guide for already created images
+
+First unlock it.
+
+`sudo cryptsetup luksOpen LUKS2_container.img vault_name`
+
+Replace `vault_name` with whatever you want to name it. It will be the name where the system maps the unlocked image
+(to `/dev/mapper/vault_name`). It will prompt you for the passphrase. Once unlucked, simply mount it.
+
+`sudo mount /dev/mapper/vault_name /your/mount/point`
+
+When no longer needed, unmount it.
+
+`sudo umount /your/mount/point`
+
+Then close the encryption.
+
+`sudo cryptsetup luksClose vault_name`
+
+Done.
